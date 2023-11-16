@@ -71,7 +71,7 @@ class StoryList {
    * Returns the new Story instance
    */
   //================================================
-  //NEW!!!!
+  //NEW!!!! => Adds a new story to the api and the local storylist instance.
   async addStory(user, { title, author, url }) {
     let token = user.loginToken;
     const response = await axios({
@@ -93,11 +93,10 @@ class StoryList {
    */
 
   //================================================
-  //NEW!!!!
+  //NEW!!!! => Removes a story from the apia and the local storylist instance
   async removeStory(user, storyId) {
     let token = user.loginToken;
     try {
-      //is it work?
       await axios({
         method: 'DELETE',
         url: `${BASE_URL}/stories/${storyId}`,
@@ -107,7 +106,6 @@ class StoryList {
       user.ownStories = user.ownStories.filter((s) => s.storyId !== storyId);
       user.favorites = user.favorites.filter((s) => s.storyId !== storyId);
     } catch (err) {
-      //not sure if it does something
       console.log('Error deleting story');
     }
   }
@@ -198,7 +196,7 @@ class User {
    *   we can log them in automatically. This function does that.
    */
 
-  //newwwwwwww!
+  newwwwwwww! => automatic login stored crendetials
   //================================================
   static async loginViaStoredCredentials(token, username) {
     try {
@@ -229,7 +227,7 @@ class User {
   /** Add a story to the list of user favorites and update the API
    * - story: a Story instance to add to favorites
    */
-  //================================================new!!!
+  //New!! => add and remove to favorites
   async addFavorite(story) {
     this.favorites.push(story);
     await this._addOrRemoveFavorite('add', story);
@@ -248,7 +246,7 @@ class User {
    *   - newState: "add" or "remove"
    *   - story: Story instance to make favorite / not favorite
    * */
-
+//NEW!! => To update user's favorites in the api
   async _addOrRemoveFavorite(newState, story) {
     let method = newState === 'add' ? 'POST' : 'DELETE';
     let token = this.loginToken;
@@ -258,6 +256,7 @@ class User {
       data: { token },
     });
   }
+  //=> checks if a story is in the user's favorite
   isFavorite(story) {
     return this.favorites.some((s) => s.storyId === story.storyId);
   }

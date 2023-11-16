@@ -106,7 +106,7 @@ function saveUserCredentialsInLocalStorage() {
  * - update nav bar options for logged-in user
  * - generate the user profile part of the page
  */
-
+//new!!=> updates the UI compenents upon user login or registration
 function updateUIOnUserLogin() {
   console.debug('updateUIOnUserLogin');
 
@@ -114,14 +114,13 @@ function updateUIOnUserLogin() {
 
   hidePageComponents();
   putStoriesOnPage();
-  //new
   generateUserProfile();
   $allStoriesList.show();
   $storiesContainer.show();
 }
 
 //================================================
-//neww!!!
+//new!! => updates the user profile section of the UI with the current user's information
 
 function generateUserProfile() {
   console.debug('generateUserProfile');

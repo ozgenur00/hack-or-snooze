@@ -24,10 +24,10 @@ function generateStoryMarkup(story, showDeleteBtn = false) {
   // console.debug("generateStoryMarkup", story);
 
   const hostName = story.getHostName();
-
+//new!!=====================================================
   // if a user is logged in, show favorite/not-favorite star
   const showStar = Boolean(currentUser);
-
+//==========================================================
   return $(`
       <li id="${story.storyId}">
         <div>
@@ -45,7 +45,7 @@ function generateStoryMarkup(story, showDeleteBtn = false) {
 }
 
 /** Make delete button HTML for story */
-
+//new!!!============================================================
 function getDeleteBtnHTML() {
   return `
       <span class="trash-can">
@@ -65,7 +65,7 @@ function getStarHTML(story, user) {
 }
 
 /** Gets list of stories from server, generates their HTML, and puts on page. */
-
+//=================================================================================
 function putStoriesOnPage() {
   console.debug('putStoriesOnPage');
 
@@ -81,7 +81,7 @@ function putStoriesOnPage() {
 }
 
 /** Handle deleting a story. */
-
+//new =============================================================================
 async function deleteStory(evt) {
   console.debug('deleteStory');
 

@@ -38,6 +38,7 @@ function updateNavOnLogin() {
 
 //new!!!
 //================================================
+//=> hides current page components, shows the list of all stories and the form to submit a new story
 function navSubmitStoryClick(e) {
   console.debug('navSubmitStoryClick', e);
   hidePageComponents();
@@ -46,7 +47,7 @@ function navSubmitStoryClick(e) {
 }
 
 $navSubmitStory.on('click', navSubmitStoryClick);
-
+//=>hide current components and display favorites or user's stories
 function navFavoritesClick(e) {
   console.debug('navFavoriteClick', e);
   hidePageComponents();
@@ -62,7 +63,7 @@ function navMyStories(e) {
 }
 
 $body.on('click', '#nav-my-stories', navMyStories);
-
+//=> click event of the user profile navigation link
 function navProfileClick(e) {
   console.debug('navProfileClick', e);
   hidePageComponents();

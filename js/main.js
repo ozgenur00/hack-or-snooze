@@ -7,17 +7,17 @@ const $body = $('body');
 const $storiesLoadingMsg = $('#stories-loading-msg');
 const $allStoriesList = $('#all-stories-list');
 //=================================================
-//new
+//new => Suggest that the application has different sections or lists for displaying user-specific stories, favorited stroies and a general container for all stories
 const $ownStories = $('#my-stories');
 const $favoritedStories = $('#favorited-stories');
 const $storiesContainer = $('#stories-container');
-
+//=> Suggests a general class selector for all types of story lists in the application
 const $storiesLists = $('.stories-list');
 //=================================================
 const $loginForm = $('#login-form');
 const $signupForm = $('#signup-form');
 //=================================================
-//new
+//new => for submiting new stories
 const $submitForm = $('#submit-form');
 const $navSubmitStory = $('#nav-submit-story');
 const $userProfile = $('#user-profie');

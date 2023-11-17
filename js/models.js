@@ -196,7 +196,7 @@ class User {
    *   we can log them in automatically. This function does that.
    */
 
-  newwwwwwww! => automatic login stored crendetials
+  // newwwwwwww! => automatic login stored crendetials
   //================================================
   static async loginViaStoredCredentials(token, username) {
     try {
